@@ -22,7 +22,7 @@ export default function Hero() {
     animateHeroSection();
   }, []);
   return (
-    <div ref={scope} className="h-[calc(100vh-112px)] flex gap-32 mb-20">
+    <div ref={scope} className="h-[calc(100vh-112px)] flex gap-32">
       <div className="flex flex-col gap-6 w-[37%] font-bold text-offWhite h-full justify-center">
         <div className="flex flex-col gap-2 text-5xl">
           <div id="hero-intro" className="leading-tight">
@@ -43,11 +43,11 @@ export default function Hero() {
         </div>
         <div id="hero-socials" className="flex gap-10">
           {socials.map((item) => (
-            <motion.div key={item.id} initial={{ opacity: 0 }}>
-              <Link
-                className="text-3xl hover:text-navy hover:bg-offWhite p-3 rounded-full transition-colors duration-300"
-                href={item.link}
-                target="_blank">
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0 }}
+              className="text-3xl hover:text-navy hover:bg-offWhite p-3 rounded-full transition-colors duration-300">
+              <Link href={item.link} target="_blank">
                 {item.icon}
               </Link>
             </motion.div>

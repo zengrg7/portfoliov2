@@ -25,6 +25,9 @@ const config: Config = {
         offWhite: "#e6f1ff",
         green: "#64ffda",
       },
+      animation: {
+        "spin-slow": "spin 4s linear infinite",
+      },
     },
     plugins: [nextui()],
   },

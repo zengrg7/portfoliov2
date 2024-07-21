@@ -5,11 +5,11 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div id="#about" className="w-full flex items-center justify-center py-20">
-      <div className="flex gap-20 items-center">
+    <div id="#about" className="w-full flex items-center justify-center">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-20 items-center">
         <div className="flex flex-col gap-10">
           <Title name="About Me" />
-          <div className="flex flex-col gap-6 text-slate w-[650px]">
+          <div className="flex flex-col gap-6 text-slate w-full md:w-[650px]">
             <p className="">
               Hello! I&rsquo;m <span className="text-green">Bijen</span>, and
               I&rsquo;m passionate about crafting engaging experiences on the
