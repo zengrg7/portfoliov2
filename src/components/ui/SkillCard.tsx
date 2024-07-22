@@ -23,7 +23,7 @@ export default function SkillCard({
         //     type: "tween",
         //   },
         // }}
-        className="absolute w-1/2 h-[200px] group-hover:bg-green group-hover:animate-spin-slow transition-transform duration-[4s] ease-linear"></div>
+        className="absolute w-1/2 h-[200px] group-hover:bg-gradient-to-b from-green to-orange-400 group-hover:animate-spin-slow transition-transform duration-[4s] ease-linear"></div>
       <div className="flex flex-col items-center justify-center gap-3 z-10 bg-navy h-[124px] w-[138.4px] rounded-lg">
         <Image
           src={icon}

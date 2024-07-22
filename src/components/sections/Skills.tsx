@@ -1,6 +1,7 @@
 import React from "react";
 import SkillCard from "../ui/SkillCard";
 import TitleTwo from "../ui/TitleTwo";
+import { motion } from "framer-motion";
 
 export default function Skills() {
   const mySkills = [
@@ -20,13 +21,27 @@ export default function Skills() {
     { name: "Bootstrap", icon: "/bootstrap.png" },
   ];
   return (
-    <div className="flex flex-col gap-20 items-center">
-      <TitleTwo name="My Skills" />
+    <motion.div
+      id="skills"
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        transition: {
+          type: "spring",
+          stiffness: 100,
+          duration: 0.5,
+          ease: "backInOut",
+        },
+      }}
+      viewport={{ margin: "-200px", once: true }}
+      className="flex flex-col gap-20 items-center pt-20">
+      <TitleTwo name="My Expertise" />
       <div className="flex gap-10 items-center justify-center overflow-hidden flex-wrap">
         {mySkills.map((skill) => (
           <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

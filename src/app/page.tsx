@@ -11,7 +11,7 @@ import Skills from "@/components/sections/Skills";
 
 export default function Home() {
   return (
-    <main className="my-container flex flex-col gap-40">
+    <main className="my-container flex flex-col gap-20">
       <Hero />
       <About />
       <Skills />

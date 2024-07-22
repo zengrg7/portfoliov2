@@ -2,10 +2,16 @@ import Image from "next/image";
 import React from "react";
 import Title from "../ui/Title";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div id="#about" className="w-full flex items-center justify-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { duration: 1 } }}
+      viewport={{ margin: "-200px", once: true }}
+      id="about"
+      className="w-full flex items-center justify-center pt-20">
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-20 items-center">
         <div className="flex flex-col gap-10">
           <Title name="About Me" />
@@ -52,6 +58,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

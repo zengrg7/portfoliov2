@@ -22,7 +22,9 @@ export default function Hero() {
     animateHeroSection();
   }, []);
   return (
-    <div ref={scope} className="h-[calc(100vh-112px)] flex gap-32">
+    <div
+      ref={scope}
+      className="h-[calc(100vh-112px)] max-h-[800px] flex gap-32">
       <div className="flex flex-col gap-6 w-[37%] font-bold text-offWhite h-full justify-center">
         <div className="flex flex-col gap-2 text-5xl">
           <div id="hero-intro" className="leading-tight">
@@ -56,12 +58,17 @@ export default function Hero() {
         <div id="hero-buttons" className="flex gap-10">
           <motion.div initial={{ opacity: 0 }}>
             <Button
+              link="mailto:bijeng695@gmailcom"
               name="contact me"
               icon={<MdOutlineEmail className="text-xl" />}
             />
           </motion.div>
           <motion.div initial={{ opacity: 0 }}>
-            <Button name="resume" icon={<FaRegFilePdf className="text-lg" />} />
+            <Button
+              link="mailto:bijeng695@gmailcom"
+              name="resume"
+              icon={<FaRegFilePdf className="text-lg" />}
+            />
           </motion.div>
         </div>
       </div>
@@ -78,7 +85,7 @@ export default function Hero() {
               <div key={item.id}>{item.icon}</div>
             ))}
           </motion.div>
-          <div className="p-6">
+          <div className="p-6 h-full flex items-center justify-center">
             <motion.code
               initial={{ opacity: 0 }}
               id="hero-code"
