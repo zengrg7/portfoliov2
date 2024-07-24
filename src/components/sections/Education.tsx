@@ -31,8 +31,8 @@ export default function Education() {
   return (
     <div
       id="education"
-      className="w-full flex flex-col items-center justify-center gap-20 pt-20">
-      <TitleTwo name="My Academic Background" />
+      className="w-full flex flex-col items-center justify-center gap-10 lg:gap-20 pt-10 lg:pt-20">
+      <TitleTwo name="My Education" />
       <div className="w-full flex flex-col items-center justify-center gap-10">
         {myEducation.map((item) => (
           <EducationCard key={item.year} {...item} />

@@ -34,8 +34,8 @@ export default function Skills() {
           ease: "backInOut",
         },
       }}
-      viewport={{ margin: "-200px", once: true }}
-      className="flex flex-col gap-20 items-center pt-20">
+      viewport={{ margin: "-100px 0px 0px 0px", once: true }}
+      className="flex flex-col gap-10 lg:gap-20 items-center pt-10 lg:pt-20">
       <TitleTwo name="My Expertise" />
       <div className="flex gap-10 items-center justify-center overflow-hidden flex-wrap">
         {mySkills.map((skill) => (

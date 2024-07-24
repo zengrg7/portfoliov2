@@ -1,18 +1,32 @@
 import React, { useState } from "react";
 import TitleTwo from "../ui/TitleTwo";
-import { motion } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 
 export default function Experience() {
+  const [scope, animate] = useAnimate();
   const [active, setActive] = useState(0);
+
+  const handleExperienceChange = async (index: number) => {
+    await animate("#experienceCard", { opacity: 0, x: 300 }, { duration: 0.5 });
+    setActive(index);
+    await animate("#experienceCard", { opacity: 1, x: 0 }, { duration: 0.5 });
+  };
   return (
-    <div id="experience" className="flex flex-col items-center gap-14 pt-20">
+    <div
+      ref={scope}
+      id="experience"
+      className="flex flex-col items-center gap-14 pt-10 lg:pt-20">
       <TitleTwo name="My Experiences" />
-      <div className="flex gap-10 w-1/2 ">
-        <div className="flex flex-col">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ margin: "-100px 0px 0px 0px", once: true }}
+        className="flex flex-col lg:flex-row gap-6 lg:gap-10 w-full lg:w-2/3 ">
+        <div className="flex lg:flex-col">
           {myExperiences.map((item, index) => (
             <div
-              onClick={() => setActive(index)}
-              className={`py-2 px-6 border-l-2 hover:cursor-pointer hover:bg-lightNavy ${
+              onClick={() => handleExperienceChange(index)}
+              className={`text-sm md:text-base text-center py-2 px-6 border-b-2 lg:border-b-0 lg:border-l-2 hover:cursor-pointer hover:bg-lightNavy ${
                 active === index
                   ? "border-green text-green bg-lightNavy"
                   : "border-lightestNavy text-slate"
@@ -22,7 +36,9 @@ export default function Experience() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-6 w-1 flex-grow pt-1 text-slate">
+        <div
+          id="experienceCard"
+          className="flex flex-col gap-6 w-full lg:w-1 lg:flex-grow pt-1 text-slate">
           <div className="flex flex-col gap-2">
             <h3 className="font-semibold text-lg">
               <span className="text-offWhite">
@@ -44,7 +60,7 @@ export default function Experience() {
             ))}
           </ul>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

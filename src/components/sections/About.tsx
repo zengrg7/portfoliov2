@@ -3,19 +3,24 @@ import React from "react";
 import Title from "../ui/Title";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import TitleTwo from "../ui/TitleTwo";
 
 export default function About() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1, transition: { duration: 1 } }}
-      viewport={{ margin: "-200px", once: true }}
+    <div
       id="about"
-      className="w-full flex items-center justify-center pt-20">
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-20 items-center">
+      className="w-full flex flex-col lg:flex-row items-center justify-center pt-10 lg:pt-20">
+      <div className="w-full lg:hidden">
+        <TitleTwo name="About Me" />
+      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 1 } }}
+        viewport={{ margin: "-100px 0px 0px 0px", once: true }}
+        className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-20 items-center mt-10 lg:mt-0">
         <div className="flex flex-col gap-10">
           <Title name="About Me" />
-          <div className="flex flex-col gap-6 text-slate w-full md:w-[650px]">
+          <div className="flex flex-col gap-6 text-slate w-full md:w-[650px] text-justify">
             <p className="">
               Hello! I&rsquo;m <span className="text-green">Bijen</span>, and
               I&rsquo;m passionate about crafting engaging experiences on the
@@ -40,7 +45,6 @@ export default function About() {
               find me exploring the latest tech trends, brainstorming new ideas,
               or sharing my knowledge with the developer community.
             </p>
-            <p></p>
           </div>
         </div>
         <div className="size-[300px] border-2 border-green rounded-xl">
@@ -57,7 +61,7 @@ export default function About() {
             />
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

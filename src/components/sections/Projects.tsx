@@ -1,19 +1,23 @@
 import React from "react";
 import TitleTwo from "../ui/TitleTwo";
 import ProjectCard from "../ui/ProjectCard";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <div className="flex flex-col gap-20 pt-20">
+    <motion.div className="flex flex-col gap-20 pt-10 lg:pt-20">
       <TitleTwo name="My Projects" />
       <div className="flex flex-col gap-20 justify-center items-center">
         {myProjects.map((item, index) => (
           <ProjectCard key={item.name} index={index + 1} {...item} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
+// initial={{ display: "none", opacity: 0 }}
+//       whileInView={{ display: "block", opacity: 1 }}
+//       viewport={{ margin: "-100px 0px 0px 0px", once: true }}
 
 const myProjects = [
   {
