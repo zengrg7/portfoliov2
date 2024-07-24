@@ -16,7 +16,7 @@ export default function About() {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 1 } }}
-        viewport={{ margin: "-100px 0px 0px 0px", once: true }}
+        viewport={{ margin: "-200px 0px 0px 0px", once: true }}
         className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-20 items-center mt-10 lg:mt-0">
         <div className="flex flex-col gap-10">
           <Title name="About Me" />
