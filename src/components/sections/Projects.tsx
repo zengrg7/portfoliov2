@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <motion.div id="projects" className="flex flex-col gap-20 pt-10 lg:pt-20">
+    <motion.div
+      id="projects"
+      className="flex flex-col gap-20 pt-10 lg:pt-20 overflow-x-hidden">
       <TitleTwo name="My Projects" />
       <div className="flex flex-col gap-20 justify-center items-center">
         {myProjects.map((item, index) => (
