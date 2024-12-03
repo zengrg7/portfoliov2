@@ -69,7 +69,7 @@ export default function Hero() {
           </motion.div>
           <motion.div initial={{ opacity: 0 }}>
             <Button
-              link="/my-resume.pdf"
+              link="/Bijen Gurung's Resume.pdf"
               name="resume"
               icon={<FaRegFilePdf className="text-lg" />}
             />
