@@ -16,7 +16,7 @@ export default function Hero() {
     await animate(
       "#hero-code div",
       { opacity: 1 },
-      { duration: 0.05, delay: stagger(0.1) }
+      { duration: 0.05, delay: stagger(0.05) }
     );
     await animate("#hero-intro span", { opacity: 1 }, { delay: stagger(0.1) });
     await animate("#hero-socials div", { opacity: 1 }, { delay: stagger(0.1) });
