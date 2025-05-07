@@ -52,7 +52,7 @@ export default function Hero() {
             <motion.div
               key={item.id}
               initial={{ opacity: 0 }}
-              className="text-2xl lg:text-3xl hover:text-navy hover:bg-offWhite p-3 rounded-full transition-colors duration-300">
+              className="text-2xl lg:text-3xl hover:text-navy hover:bg-offWhite p-3 rounded-full transition-colors duration-100">
               <Link href={item.link} target="_blank">
                 <p className="sr-only">{item.id}</p>
                 {item.icon}
