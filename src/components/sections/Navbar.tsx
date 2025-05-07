@@ -55,6 +55,7 @@ export default function Navbar() {
       <div className="relative py-4 flex justify-between w-full items-center my-container">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <Image
+            priority
             className="size-10 md:size-16 lg:size-20"
             src={"/bijen-logo.svg"}
             width={80}

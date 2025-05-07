@@ -57,6 +57,7 @@ export default function ProjectCard({
           href={link}
           target="_blank"
           className="text-2xl text-offWhite font-semibold hover:text-green">
+          <p className="sr-only">{name}</p>
           {name}
         </Link>
         <p
@@ -73,6 +74,7 @@ export default function ProjectCard({
           ))}
         </div>
         <Link className="w-fit" href={link} target="_blank">
+          <p className="sr-only">{link}</p>
           <RxExternalLink className="text-2xl hover:text-green" />
         </Link>
       </motion.div>

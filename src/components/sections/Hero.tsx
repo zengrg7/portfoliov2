@@ -11,16 +11,16 @@ export default function Hero() {
   const [scope, animate] = useAnimate();
 
   const animateHeroSection = async () => {
-    await animate("#hero-code-section", { borderWidth: 2 }, { duration: 0.3 });
+    await animate("#hero-code-section", { borderWidth: 2 }, { duration: 0.1 });
     await animate("#hero-window-icons", { opacity: 1 }, { duration: 0 });
     await animate(
       "#hero-code div",
       { opacity: 1 },
-      { duration: 0.3, delay: stagger(0.1) }
+      { duration: 0.05, delay: stagger(0.1) }
     );
-    await animate("#hero-intro span", { opacity: 1 }, { delay: stagger(0.2) });
-    await animate("#hero-socials div", { opacity: 1 }, { delay: stagger(0.2) });
-    await animate("#hero-buttons div", { opacity: 1 }, { delay: stagger(0.2) });
+    await animate("#hero-intro span", { opacity: 1 }, { delay: stagger(0.1) });
+    await animate("#hero-socials div", { opacity: 1 }, { delay: stagger(0.1) });
+    await animate("#hero-buttons div", { opacity: 1 }, { delay: stagger(0.1) });
   };
   useEffect(() => {
     animateHeroSection();
@@ -54,6 +54,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               className="text-2xl lg:text-3xl hover:text-navy hover:bg-offWhite p-3 rounded-full transition-colors duration-300">
               <Link href={item.link} target="_blank">
+                <p className="sr-only">{item.id}</p>
                 {item.icon}
               </Link>
             </motion.div>
@@ -69,7 +70,7 @@ export default function Hero() {
           </motion.div>
           <motion.div initial={{ opacity: 0 }}>
             <Button
-              link="/Bijen Gurung's Resume.pdf"
+              link="/resume.pdf"
               name="resume"
               icon={<FaRegFilePdf className="text-lg" />}
             />
