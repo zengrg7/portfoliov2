@@ -23,12 +23,49 @@ export default function Projects() {
 
 const myProjects = [
   {
+    name: "Alpine Club of Himalaya",
+    description:
+      "I developed this complete travel booking website for Alpine Club of Himalaya using Next.js and MongoDB. The platform leverages server actions to efficiently retrieve data from the database, enabling clients to book travel packages and securely make payments. It also features a comprehensive admin panel that allows administrators to manage and update all website data.",
+    technologies: [
+      "Next JS",
+      "Tailwind CSS",
+      "Typescript",
+      "Docker",
+      "VPS",
+      "NextUI",
+    ],
+    image: "/alpineclubofhimalaya.png",
+    link: "https://alpineclubofhimalaya.com",
+  },
+  {
     name: "Lakhey Wears",
     description:
       "I developed this e-commerce website for the Lakheywears clothing brand using Next.js, which significantly enhances both the customer and administrative experience. The platform enables customers to effortlessly browse through a diverse range of products, add items to their cart, and complete purchases with secure payment options.",
     technologies: ["Next JS", "Tailwind CSS", "Typescript", "Vercel", "NextUI"],
     image: "/lakheywears.png",
-    link: "https://lakheywears.com.np",
+    link: "https://lakhey-wears.vercel.app",
+  },
+  {
+    name: "Bondspotless",
+    description:
+      "Bondspotless, an Australian cleaning service provider, now boasts a modern and efficient website built with Next.js. While largely static for speed, the site utilizes Incremental Static Regeneration (ISR) to create dynamic service pages for all locations, easily managed through a dedicated admin dashboard. The admin interface also simplifies communication and recruitment by collecting contact form submissions and job applications.",
+    technologies: ["Next JS", "Tailwind CSS", "Typescript", "Vercel", "NextUI"],
+    image: "/bondspotless.png",
+    link: "https://bondspotless.com.au",
+  },
+  {
+    name: "ZenGPT",
+    description:
+      "ZenGPT is a real-time chatbot built with Next.js and the Vercel AI SDK, integrated with Gemini Flash 2.0. It streams responses as users type their queries, offering a smooth and interactive chat experience. Styled with Tailwind CSS and Shadcn UI, the app is fully deployed on Vercel.",
+    technologies: [
+      "Next JS",
+      "Tailwind CSS",
+      "Typescript",
+      "Vercel AI SDK",
+      "Shadcn UI",
+    ],
+    image: "/zengpt.png",
+    link: "https://zengpt-ashy.vercel.app/",
   },
   {
     name: "Leaf Holidays",
@@ -42,7 +79,7 @@ const myProjects = [
       "MaterialUI",
     ],
     image: "/leafholidays.png",
-    link: "https://leaf-holidays.com",
+    link: "https://leafholidays.vercel.app",
   },
   {
     name: "Ecommercery",

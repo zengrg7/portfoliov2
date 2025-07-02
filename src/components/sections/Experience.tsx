@@ -22,7 +22,7 @@ export default function Experience() {
         whileInView={{ opacity: 1 }}
         viewport={{ margin: "-100px 0px 0px 0px", once: true }}
         className="flex flex-col lg:flex-row gap-6 lg:gap-10 w-full lg:w-2/3 ">
-        <div className="flex lg:flex-col">
+        <div className="flex lg:flex-col lg:items-start">
           {myExperiences.map((item, index) => (
             <div
               onClick={() => handleExperienceChange(index)}
@@ -66,7 +66,20 @@ export default function Experience() {
 }
 const myExperiences = [
   {
-    year: "Jan 2024 - Current",
+    year: "May 2025 - Present",
+    company: "DIGU, LLC",
+    role: "Full-Stack Developer",
+    description: [
+      "Integrated HubSpot with the backend to display blog content on the website and capture leads from potential customers.",
+      "Integrated the ClickUp webhooks to add contacts(task) added in clickup to hubspot.",
+      "Removed redundant code and optimized the existing codebase, improving overall performance and maintainability.",
+      "Implemented caching strategies to enhance application performance and reduce server load.",
+      "Collaborated with cross-functional teams to deliver high-quality, scalable solutions, adhering to agile methodologies and best practices.",
+    ],
+  },
+
+  {
+    year: "Jan 2024 - Apr 2025",
     company: "I.T. Sansaar",
     role: "Full-Stack Developer",
     description: [
